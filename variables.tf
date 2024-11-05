@@ -37,6 +37,7 @@ variable "admin_username" {
 variable "admin_password" {
   description = "Admin password for the VM"
   sensitive   = true
+  default = "adminpassword"
 }
 
 variable "vm_size" {
@@ -52,6 +53,7 @@ variable "db_admin_login" {
 variable "db_admin_password" {
   description = "Admin password for the database"
   sensitive   = true
+  default = "dbadminpassword"
 }
 
 variable "db_sku_name" {
