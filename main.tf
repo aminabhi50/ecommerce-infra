@@ -18,7 +18,6 @@ module "vm" {
   source              = "./modules/vm"
   location            = azurerm_resource_group.ecommerce_rg.location
   resource_group_name = azurerm_resource_group.ecommerce_rg.name
-  network_id          = module.networking.network_id
   subnet_id           = module.networking.subnet_id
   admin_username      = var.admin_username
   admin_password      = var.admin_password
