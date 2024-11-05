@@ -1,19 +1,27 @@
+# modules/database/main.tf
+
 resource "azurerm_mysql_flexible_server" "mysql" {
   name                = "ecommerce-mysql-server"
   location            = var.location
   resource_group_name = var.resource_group_name
-  admin_username      = var.admin_login
-  admin_password      = var.admin_password
-  sku_name            = var.sku_name
+  administrator_login = var.admin_login
+  administrator_password = var.admin_password
+  version             = "8.0"
+  
+  sku_name = var.sku_name
 
   storage {
-    storage_mb            = var.storage_mb
+    size_gb              = var.storage_size_gb
     backup_retention_days = var.backup_retention_days
-    geo_redundant_backup  = var.geo_redundant_backup
+    geo_redundant_backup = var.geo_redundant_backup
   }
 
   high_availability {
-    mode = "ZoneRedundant" # Or "SameZone" depending on your requirement
+    mode = "SameZone" # Set this to "SameZone" if you prefer single-zone availability
+  }
+
+  network {
+    delegated_subnet_id = var.subnet_id
   }
 }
 
