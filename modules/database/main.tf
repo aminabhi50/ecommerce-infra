@@ -1,5 +1,3 @@
-# modules/database/main.tf
-
 resource "azurerm_mysql_flexible_server" "mysql" {
   name                = "ecommerce-mysql-server"
   location            = var.location
@@ -11,7 +9,7 @@ resource "azurerm_mysql_flexible_server" "mysql" {
   sku_name = var.sku_name
 
   storage {
-    size_gb              = var.storage_size_gb
+    size_gb              = var.storage_gb
     backup_retention_days = var.backup_retention_days
     geo_redundant_backup = var.geo_redundant_backup
   }
