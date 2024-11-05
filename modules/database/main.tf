@@ -4,7 +4,6 @@ resource "azurerm_mysql_flexible_server" "mysql" {
   resource_group_name = var.resource_group_name
   administrator_login = var.admin_login
   administrator_password = var.admin_password
-  version             = "8.0"
   
   sku_name = var.sku_name
 
