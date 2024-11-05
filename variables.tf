@@ -61,9 +61,9 @@ variable "db_sku_name" {
   default     = "B_Gen5_1"
 }
 
-variable "db_storage_mb" {
+variable "db_storage_gb" {
   description = "Database storage size in MB"
-  default     = 5120
+  type = number
 }
 
 variable "db_backup_retention_days" {
@@ -74,4 +74,9 @@ variable "db_backup_retention_days" {
 variable "db_geo_redundant_backup" {
   description = "Enable geo-redundant backup for the database"
   default     = "Enabled"
+}
+
+variable "subnet_id" {
+  type        = string
+  description = "Subnet ID for the MySQL server"
 }
