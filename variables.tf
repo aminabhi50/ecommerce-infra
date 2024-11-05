@@ -76,8 +76,3 @@ variable "db_geo_redundant_backup" {
   description = "Enable geo-redundant backup for the database"
   default     = "Enabled"
 }
-
-variable "subnet_id" {
-  type        = string
-  description = "Subnet ID for the MySQL server"
-}
