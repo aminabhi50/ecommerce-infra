@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git Checkout Stage') {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/aminabhi50/JenkinsTerraformVMProject.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/aminabhi50/ecommerce-infra.git']])
             }
         }
 
@@ -23,7 +23,7 @@ pipeline {
         stage('Terraform Plan'){
             steps {
                     withCredentials([azureServicePrincipal(
-                    credentialsId: 'f03ac50c-60ef-4e72-80d5-61e066ba1ca7',
+                    credentialsId: '0c15f0b5-3a9c-4ea0-8191-73d5f2a8251e',
                     subscriptionIdVariable: 'SUB_ID',
                     clientIdVariable: 'CLIENT_ID',
                     clientSecretVariable: 'CLIENT_SECRET',
@@ -36,7 +36,7 @@ pipeline {
         stage('Terraform Apply'){
             steps {
                     withCredentials([azureServicePrincipal(
-                    credentialsId: 'f03ac50c-60ef-4e72-80d5-61e066ba1ca7',
+                    credentialsId: '0c15f0b5-3a9c-4ea0-8191-73d5f2a8251e',
                     subscriptionIdVariable: 'SUB_ID',
                     clientIdVariable: 'CLIENT_ID',
                     clientSecretVariable: 'CLIENT_SECRET',
