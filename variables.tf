@@ -62,8 +62,9 @@ variable "db_sku_name" {
 }
 
 variable "db_storage_gb" {
-  description = "Database storage size in MB"
+  description = "Database storage size in GB"
   type = number
+  default = 4
 }
 
 variable "db_backup_retention_days" {

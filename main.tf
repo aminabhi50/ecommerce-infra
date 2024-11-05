@@ -32,7 +32,7 @@ module "database" {
   admin_login           = var.db_admin_login
   admin_password        = var.db_admin_password
   sku_name              = var.db_sku_name
-  subnet_id             = azurerm_subnet.db_subnet.id
+  subnet_id             = module.networking.subnet_id
   storage_gb            = var.db_storage_gb
   backup_retention_days = var.db_backup_retention_days
   geo_redundant_backup  = var.db_geo_redundant_backup
