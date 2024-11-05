@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git Checkout Stage') {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/aminabhi50/JenkinsTerraformVMProject.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/aminabhi50/ecommerce-infra.git']])
             }
         }
 
