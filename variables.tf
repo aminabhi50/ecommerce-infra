@@ -60,19 +60,3 @@ variable "db_sku_name" {
   description = "Database SKU name"
   default     = "B_Gen5_1"
 }
-
-variable "db_storage_gb" {
-  description = "Database storage size in GB"
-  type = number
-  default = 4
-}
-
-variable "db_backup_retention_days" {
-  description = "Database backup retention in days"
-  default     = 7
-}
-
-variable "db_geo_redundant_backup" {
-  description = "Enable geo-redundant backup for the database"
-  default     = "Enabled"
-}

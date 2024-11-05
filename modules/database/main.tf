@@ -8,18 +8,8 @@ resource "azurerm_mysql_flexible_server" "mysql" {
   
   sku_name = var.sku_name
 
-  storage {
-    size_gb              = var.storage_gb
-    backup_retention_days = var.backup_retention_days
-    geo_redundant_backup = var.geo_redundant_backup
-  }
-
   high_availability {
     mode = "SameZone" # Set this to "SameZone" if you prefer single-zone availability
-  }
-
-  network {
-    delegated_subnet_id = var.subnet_id
   }
 }
 
