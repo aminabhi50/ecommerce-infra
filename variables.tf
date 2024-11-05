@@ -58,5 +58,5 @@ variable "db_admin_password" {
 
 variable "db_sku_name" {
   description = "Database SKU name"
-  default     = "B_Gen5_1"
+  default     = "GP_Standard_D2ds_v4"
 }
