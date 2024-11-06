@@ -48,7 +48,7 @@ variable "vm_size" {
 variable "sql_server_name" {
   description = "The name of the SQL server"
   type        = string
-  default     = "ecommerce-sql-server"
+  default     = "ecommerce-sql-server-12"
 }
 
 variable "sql_admin_username" {
@@ -66,7 +66,7 @@ variable "sql_admin_password" {
 variable "database_name" {
   description = "The name of the SQL database"
   type        = string
-  default     = "ecommerce-sql-database"
+  default     = "ecommerce-sql-database-12"
 }
 
 variable "sku_name" {
