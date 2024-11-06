@@ -19,3 +19,9 @@ variable "admin_password" {
   type        = string
   sensitive   = true
 }
+
+variable "sku_name" {
+  description = "SKU name for the MySQL server"
+  type        = string
+  default     = "B_Standard_B1s"
+}

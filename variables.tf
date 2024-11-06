@@ -55,3 +55,8 @@ variable "db_admin_password" {
   sensitive   = true
   default = "Dbadminpassword@123"
 }
+
+variable "db_sku_name" {
+  description = "Database SKU name"
+  default     = "B_Standard_B1s"
+}

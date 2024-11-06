@@ -5,6 +5,8 @@ resource "azurerm_mysql_flexible_server" "mysql" {
   administrator_login = var.admin_login
   administrator_password = var.admin_password
   
+  sku_name = var.sku_name
+
   high_availability {
     mode = "SameZone" # Set this to "SameZone" if you prefer single-zone availability
   }
