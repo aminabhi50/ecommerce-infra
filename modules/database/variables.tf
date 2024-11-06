@@ -12,25 +12,22 @@ variable "location" {
 variable "sql_server_name" {
   description = "The name of the SQL server"
   type        = string
-  default     = "ecommerce-sql-server"
 }
 
 variable "sql_admin_username" {
-  description = "The admin username for SQL Server"
+  description = "The administrator username for SQL server"
   type        = string
-  default     = "sqladmin"
 }
 
 variable "sql_admin_password" {
-  description = "The admin password for SQL Server"
+  description = "The administrator password for SQL server"
   type        = string
-  default     = "Sqladmin@123"
+  sensitive   = true
 }
 
 variable "database_name" {
   description = "The name of the SQL database"
   type        = string
-  default     = "ecommerce-sql-database"
 }
 
 variable "sku_name" {
@@ -40,7 +37,7 @@ variable "sku_name" {
 }
 
 variable "max_size_gb" {
-  description = "The maximum size of the SQL database"
+  description = "The max size of the SQL database in GB"
   type        = number
   default     = 5
 }
