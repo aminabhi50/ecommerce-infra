@@ -33,7 +33,7 @@ variable "database_name" {
 variable "sku_name" {
   description = "The SKU name for the SQL Database"
   type        = string
-  default     = "S1"
+  default     = "Basic"
 }
 
 variable "max_size_gb" {
