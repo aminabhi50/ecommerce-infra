@@ -8,7 +8,7 @@ resource "azurerm_mysql_flexible_server" "mysql" {
   sku_name = var.sku_name
 
   high_availability {
-    mode = "SameZone" # Set this to "SameZone" if you prefer single-zone availability
+    mode = "ZoneRedundant" # Set this to "SameZone" if you prefer single-zone availability
   }
 }
 
