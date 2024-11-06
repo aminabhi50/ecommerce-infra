@@ -22,7 +22,6 @@ module "vm" {
   admin_username      = var.admin_username
   admin_password      = var.admin_password
   vm_size             = var.vm_size
-  disable_password_authentication = false
 }
 
 # Database Module
