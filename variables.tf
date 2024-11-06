@@ -45,18 +45,34 @@ variable "vm_size" {
   default     = "Standard_B1s"
 }
 
-variable "db_admin_login" {
-  description = "Admin login for the database"
-  default     = "dbadmin"
+variable "sql_server_name" {
+  description = "The name of the SQL server"
+  type        = string
 }
 
-variable "db_admin_password" {
-  description = "Admin password for the database"
-  sensitive   = true
-  default = "Dbadminpassword@123"
+variable "sql_admin_username" {
+  description = "The admin username for SQL Server"
+  type        = string
+  default     = "sqladmin"
 }
 
-variable "db_sku_name" {
-  description = "Database SKU name"
-  default     = "B_Standard_B1s"
+variable "sql_admin_password" {
+  description = "The admin password for SQL Server"
+  type        = string
+  default     = "Sqladmin@123"
+}
+
+variable "database_name" {
+  description = "The name of the SQL database"
+  type        = string
+}
+
+variable "sku_name" {
+  description = "The SKU name for the SQL Database"
+  type        = string
+}
+
+variable "max_size_gb" {
+  description = "The maximum size of the SQL database"
+  type        = number
 }
