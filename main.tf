@@ -38,10 +38,10 @@ module "sql_database" {
   source               = "./modules/database"
   resource_group_name  = azurerm_resource_group.ecommerce_rg.name
   location             = azurerm_resource_group.ecommerce_rg.location
-  sql_server_name      = "ecommerce-sql-server"
+  sql_server_name      = var.sql_server_name
   sql_admin_username   = var.sql_admin_username
   sql_admin_password   = var.sql_admin_password
-  database_name        = "ecommerce-sql-database"
-  sku_name             = "S1"
-  max_size_gb          = 5
+  database_name        = var.database_name
+  sku_name             = var.sku_name
+  max_size_gb          = var.max_size_gb
 }
