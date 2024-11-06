@@ -31,5 +31,4 @@ module "database" {
   resource_group_name   = azurerm_resource_group.ecommerce_rg.name
   admin_login           = var.db_admin_login
   admin_password        = var.db_admin_password
-  sku_name              = var.db_sku_name
 }
