@@ -60,7 +60,7 @@ variable "sql_admin_username" {
 variable "sql_admin_password" {
   description = "The admin password for SQL Server"
   type        = string
-  default     ="Ecommerceplat@23"
+  default     ="Asapeipprpl@235"
 }
 
 variable "database_name" {
