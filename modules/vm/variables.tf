@@ -1,6 +1,7 @@
 variable "location" {
   description = "Azure region for the VM"
   type        = string
+  default     = "East US"
 }
 
 variable "resource_group_name" {

@@ -1,5 +1,6 @@
 variable "location" {
   description = "Azure region for networking resources"
+  default = "East US"
 }
 
 variable "resource_group_name" {

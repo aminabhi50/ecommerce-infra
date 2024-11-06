@@ -1,6 +1,7 @@
 variable "location" {
   description = "Azure region for the MySQL server"
   type        = string
+  default     = "East US"
 }
 
 variable "resource_group_name" {
