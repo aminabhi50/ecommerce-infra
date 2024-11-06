@@ -78,5 +78,5 @@ variable "sku_name" {
 variable "max_size_gb" {
   description = "The maximum size of the SQL database"
   type        = number
-  default     = 5
+  default     = 2
 }
